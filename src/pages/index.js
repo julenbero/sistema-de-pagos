@@ -6,7 +6,7 @@ import { useStripeClientSecret, useStripePromise } from '../lib/stripe';
 import { PayForm } from '../ui/components';
 import mercadopago from 'mercadopago';
 
-export default function indexPage({ checkoutUrl }) {
+export default function IndexPage({ checkoutUrl }) {
 	const stripeClientSecret = useStripeClientSecret();
 
 	const stripePromise = useStripePromise();
@@ -89,7 +89,7 @@ export default function indexPage({ checkoutUrl }) {
 	);
 }
 
-indexPage.getLayout = getLayout;
+IndexPage.getLayout = getLayout;
 
 export async function getServerSideProps() {
 	mercadopago.configure({
