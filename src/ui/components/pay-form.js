@@ -25,7 +25,7 @@ export function PayForm() {
 		const { error } = await stripe.confirmPayment({
 			elements,
 			confirmParams: {
-				return_url: 'http://localhost:3000/thanks/success',
+				return_url: `${process.env.NEXT_PUBLIC_BASE_URL}/thanks/success`,
 			},
 		});
 
